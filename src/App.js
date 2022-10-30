@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      Welcome
+      Mini template to start a new React Project
     </div>
   );
 }
