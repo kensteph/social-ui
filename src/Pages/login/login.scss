@@ -1,0 +1,89 @@
+.login {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    background-color: white;
+    width: 50%;
+    min-height: 600px;
+    border-radius: 10px;
+    overflow: hidden;/*Prevent the background image to overflow*/
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      background: linear-gradient(
+          rgb(193, 190, 255, 0.5),
+          rgb(193, 190, 255, 0.5)
+        ),
+        /*This allows to add a gradient on the background image*/
+          url("https://images.pexels.com/photos/7869441/pexels-photo-7869441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+          center;
+      background-size: cover; /*In order to view the full image*/
+      padding: 50px;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      p {
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 50%;
+        color: purple;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+        color: rgb(101, 94, 94);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+        }
+
+        button {
+          width: 50%;
+          border: none;
+          background: rgb(234, 152, 234);
+          color: white;
+          padding: 10px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
+import Login from "./login/Login";
+
 function App() {
   return (
     <div className="App">
-      Mini template to start a new React Project
+     <Login/>
     </div>
   );
 }
