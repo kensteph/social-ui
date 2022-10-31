@@ -1,6 +1,6 @@
 import Register from "./register/Register";
 import Login from "./login/Login.jsx";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 
 function App() {
 
