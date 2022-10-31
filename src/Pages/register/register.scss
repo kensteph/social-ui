@@ -1,0 +1,88 @@
+.Register {
+  display: flex;
+  height: 100vh;
+  background-color:  rgb(193, 190, 255);
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    width: 50%;
+    min-height: 600px;
+    background-color: white;
+    border-radius: 10px;
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding: 50px;
+      justify-content: center;
+
+      h1 {
+        color: rgb(113, 108, 108);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+            border: none;
+            border-bottom: 1px solid lightgray;
+            padding: 10px;
+        }
+        button {
+            border: none;
+            padding: 10px;
+            background-color: rgb(232, 165, 232);
+            color: white;
+            width: 50%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: linear-gradient(
+          rgb(248, 214, 248, 0.5),
+          rgb(248, 214, 248, 0.5)
+        ),
+        url("https://images.pexels.com/photos/5332305/pexels-photo-5332305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+          center;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
+      justify-content: center;
+
+      h1 {
+        font-size: 100px;
+        line-height: 70px;
+      }
+
+      p {
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      button {
+        border: none;
+        width: 50%;
+        color: purple;
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
