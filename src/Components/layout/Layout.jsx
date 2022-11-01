@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../../Components/navbar/Navbar";
 import Leftbar from "../../Components/leftbar/Leftbar";
 import Rightbar from "../../Components/rightbar/Rightbar";
-
+import "./layout.scss"
 const Layout = () => {
   /* This element (OUTELT ) will render either <Home> when the URL is
           "/", <Profile> at "/profile:id", or null if it is "/"
@@ -12,7 +12,7 @@ const Layout = () => {
       <Navbar />
       <div style={{ display: "flex" }}>
         <Leftbar />
-        <div style={{ flex: 6 }}>
+        <div className="pageContent">
           <Outlet />
         </div>
         <Rightbar />
