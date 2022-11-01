@@ -6,6 +6,9 @@
   border-bottom: 1px solid orange;
   padding: 10px;
   height: 50px;
+  position:sticky;
+  top: 0;
+  background-color: white;
 
   .left {
     display: flex;
