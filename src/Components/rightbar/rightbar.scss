@@ -2,68 +2,101 @@
   flex: 3;
   position: sticky;
   top: 70px;
-  height: calc(100vh - 70px); /*Because of the navbar total height is 70px (padding top and bottom is 10px + height 50px)*/
+  height: calc(
+    100vh - 70px
+  ); /*Because of the navbar total height is 70px (padding top and bottom is 10px + height 50px)*/
   overflow: scroll;
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
-  background-color:  rgba(241, 240, 240, 0.986);
+  background-color: rgba(241, 240, 240, 0.986);
 
-  .container{
-    
-      .item {
+  .container {
+    .user{
+        font-weight: 600;
+      }
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin-bottom: 30px;
+      gap: 20px;
+      background-color: white;
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        color: lightgrey;
+      }
+      .suggestions {
         display: flex;
-        flex-direction: column;
-        padding: 20px;
-        margin-bottom: 30px;
-        gap: 20px;
-        background-color: white;
-       
-        .title {
-          font-size: 18px;
-          font-weight: 600;
-          color: lightgrey;
-        }
-        .suggestions {
+        align-items: center;
+        justify-content: space-between;
+
+        .friend {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-    
-          .friend {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-    
-            img {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              object-fit: cover;
-            }
+          gap: 10px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
           }
-          .buttons {
-            display: flex;
-            gap: 10px;
-            .follow {
-              border: none;
-              padding: 5px;
-              background-color: rgb(144, 127, 244);
-              color: white;
-              font-weight: 500;
-              cursor: pointer;
-            }
-            .dismiss {
-              border: none;
-              padding: 5px;
-              background-color: rgb(244, 65, 101);
-              color: white;
-              font-weight: 500;
-              cursor: pointer;
-            }
+          
+        }
+        .buttons {
+          display: flex;
+          gap: 10px;
+          .follow {
+            border: none;
+            padding: 5px;
+            background-color: rgb(144, 127, 244);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+          }
+          .dismiss {
+            border: none;
+            padding: 5px;
+            background-color: rgb(244, 65, 101);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
           }
         }
       }
+
+      .online {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .friend-online {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          position: relative;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .badge {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute;
+            top: 0px;
+            right: -10px;
+          }
+        }
+      }
+    }
   }
-
-
 }
