@@ -6,9 +6,9 @@ import "./layout.scss"
 const Layout = () => {
   /* This element (OUTELT ) will render either <Home> when the URL is
           "/", <Profile> at "/profile:id", or null if it is "/"
-      */
+   50931194941   */
   return (
-    <div>
+    <div className="mainContainer">
       <Navbar />
       <div style={{ display: "flex" }}>
         <Leftbar />
