@@ -13,7 +13,7 @@ export const DarkModeContextProvider = ({ children }) => {
   const toggle = () => {
     setDarkMode(!darkMode);
   };
-
+  //Everytime the value of darkMode change the localstorage variable will change also
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
