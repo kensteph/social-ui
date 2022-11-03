@@ -30,7 +30,7 @@ const Rightbar = () => {
                 alt=""
               />
               <span className="user">Mubarak</span>
-              <span>Changed her cover picture </span>
+              <p>Changed her cover picture </p>
             </div>
             <div className="buttons">
               <span>1 min ago</span>
@@ -43,7 +43,7 @@ const Rightbar = () => {
                 alt=""
               />
               <span className="user">Hans</span>
-              <span>Like a post </span>
+              <p>Like a post </p>
             </div>
             <div className="buttons">
               <span>1 min ago</span>
@@ -56,7 +56,7 @@ const Rightbar = () => {
                 alt=""
               />
               <span className="user">Roodson Romain</span>
-              <span>Posted </span>
+              <p>Posted </p>
             </div>
             <div className="buttons">
               <span>1 min ago</span>
