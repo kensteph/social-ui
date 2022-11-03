@@ -1,0 +1,8 @@
+@import "../../style.scss" ;
+
+.home{
+    @include themify($themes){
+        height: calc( 100vh - 70px);
+        background-color: themed("bg");
+    }
+}
