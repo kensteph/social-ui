@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 
 //Create and export our Context
 export const AuthContext = createContext();
@@ -13,10 +14,11 @@ export const AuthContextProvider = ({ children }) => {
   const login = () => {
     setCurrentUser({
       id: 1,
-      name: "Stephanie Saint-Louis",
+      name: "Stephanie S. Romain",
       profilePicture:
         "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1600",
     });
+    <Navigate to="/"/>
   };
 
   //Everytime the currentUser state changed,the localstorage variable user will change also

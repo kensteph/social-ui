@@ -4,12 +4,15 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import Layout from "./Components/layout/Layout";
 import Home from "./Pages/home/Home";
 import Profile from "./Pages/profile/Profile";
+import { useContext } from "react";
+import { AuthContext } from "./Context/AuthContext";
 
 function App() {
-  const currentUser = true;
+  const {currentUser} = useContext(AuthContext);
+  console.log(currentUser)
   // This component will allow us to protect some routes by wrapping the given component in it
   const ProtectedRoute=( {children} )=>{
-    if(currentUser) return children 
+    if(currentUser!=null) return children 
     return (<Navigate to="/login" />)
   }
 

@@ -15,7 +15,8 @@
       "default",
       {
         "ignore": [
-          "position: sticky"
+          "position: sticky",
+          "max-height: fit-content"
         ]
       }
     ]
