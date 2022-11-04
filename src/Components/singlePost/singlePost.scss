@@ -24,6 +24,8 @@
           .user-name {
             font-weight: 600;
             font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
           }
         }
       }
@@ -53,6 +55,7 @@
 
       .item {
         display: flex;
+        font-size: 15px;
         gap: 10px;
         cursor: pointer;
       }
