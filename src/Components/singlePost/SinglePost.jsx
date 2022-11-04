@@ -1,10 +1,16 @@
 import "./singlePost.scss";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import { Link } from "react-router-dom";
+import Comment from "../comment/Comment";
+import { useState } from "react";
 
 
 const SinglePost = ({post}) => {
+    const liked = false;
+    const [openComment,setOpenComment]= useState(false);
   return (
     <div className="post">
         {/* HEADER */}
@@ -16,7 +22,9 @@ const SinglePost = ({post}) => {
               alt=""
             />
             <div className="user-info">
-              <span className="user-name">Mubarak Hossein</span>
+                <Link style={{textDecoration : "none",color:"inherit"}} to={`/profile/${post.userID}`}>
+                    <span className="user-name">{post.name}</span>
+                </Link>
               <span>a few seconds ago</span>
             </div>
           </div>
@@ -26,12 +34,11 @@ const SinglePost = ({post}) => {
         {/* BODY */}
         <div className="postBody">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+           {post.description}
           </p>
           <div className="media-section">
             <img
-              src="https://images.pexels.com/photos/3074920/pexels-photo-3074920.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src={post.postImage}
               alt=""
             />
           </div>
@@ -40,16 +47,19 @@ const SinglePost = ({post}) => {
         {/* FOOTER */}
         <div className="postFooter">
           <div className="item">
-            <FavoriteBorderOutlinedIcon /> <span>Likes</span>
+            { liked ? <FavoriteOutlinedIcon/> :<FavoriteBorderOutlinedIcon /> }<span>12 Likes</span>
           </div>
           <div className="item">
-            <TextsmsOutlinedIcon /> <span>Comments</span>
+            <TextsmsOutlinedIcon /> <span>3 Comments</span>
           </div>
           <div className="item">
             <ShareOutlinedIcon /> <span>Share</span>
           </div>
         </div>
-      </div>
+
+         {/* COMMENTS */}
+        <Comment comments={post.comments}/>
+    </div>
   )
 }
 
