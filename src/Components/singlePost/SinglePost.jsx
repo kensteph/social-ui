@@ -16,7 +16,7 @@ const SinglePost = ({post}) => {
               alt=""
             />
             <div className="user-info">
-              <span className="user-name">Mubarak Hossein</span>
+              <span className="user-name">{post.name}</span>
               <span>a few seconds ago</span>
             </div>
           </div>
@@ -26,12 +26,11 @@ const SinglePost = ({post}) => {
         {/* BODY */}
         <div className="postBody">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+           {post.description}
           </p>
           <div className="media-section">
             <img
-              src="https://images.pexels.com/photos/3074920/pexels-photo-3074920.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src={post.postImage}
               alt=""
             />
           </div>
