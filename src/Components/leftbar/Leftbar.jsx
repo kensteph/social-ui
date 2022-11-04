@@ -8,10 +8,10 @@ const Leftbar = () => {
       <div className="container">
         <div className="item-user">
           <img
-            src={currentUser.profilePicture}
+            src={currentUser?.profilePicture}
             alt=""
           />
-          <span>{currentUser.name}</span>
+          <span>{currentUser?.name}</span>
         </div>
         <div className="item">
           <img src={require("../../assets/friend.png")} alt="" />
