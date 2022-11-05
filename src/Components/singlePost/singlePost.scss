@@ -1,7 +1,11 @@
+@import "../../style.scss";
 .post {
+  @include themify($themes) {
+
     max-height: fit-content;
     border-radius: 10px;
-    background-color: white;
+    background-color: themed("bg");
+    color: themed("textColorSoft");
     padding: 15px;
 
     // HEADER
@@ -32,7 +36,7 @@
       .actions {
         font-size: 20px;
         font-weight: bold;
-        color: black;
+        color:themed("textColorSoft");
         cursor: pointer;
       }
     }
@@ -61,3 +65,4 @@
       }
     }
   }
+}

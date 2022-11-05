@@ -49,7 +49,7 @@ const SinglePost = ({post}) => {
           <div className="item">
             { liked ? <FavoriteOutlinedIcon/> :<FavoriteBorderOutlinedIcon /> }<span>12 Likes</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={()=>setOpenComment(!openComment)}>
             <TextsmsOutlinedIcon /> <span>3 Comments</span>
           </div>
           <div className="item">
@@ -58,7 +58,7 @@ const SinglePost = ({post}) => {
         </div>
 
          {/* COMMENTS */}
-        <Comment comments={post.comments}/>
+       {openComment && <Comment comments={post.comments}/>} 
     </div>
   )
 }
