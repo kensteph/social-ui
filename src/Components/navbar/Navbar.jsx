@@ -10,6 +10,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import { useContext } from "react";
 import { DarkModeContext } from "../../Context/DarkModeContext";
 import { AuthContext } from "../../Context/AuthContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const {toggle,darkMode} = useContext(DarkModeContext);
@@ -19,7 +20,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="left">
         <span className="logo">LINK SOCIAL</span>
-        <HomeOutlinedIcon />
+        <Link to="/" style={{textDecoration: "none",color:"inherit"}}><HomeOutlinedIcon /></Link>
         {darkMode ? <DarkModeOutlinedIcon onClick={toggle} /> : <LightModeIcon onClick={toggle} />}
         
         <GridViewOutlinedIcon />
