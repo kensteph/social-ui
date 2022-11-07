@@ -8,6 +8,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    margin-top: 5px;
 
     .profile-header {
       display: flex;
@@ -15,6 +16,12 @@
       align-items: center;
       justify-content: center;
       position: relative;
+
+      //Allows us to hide the bar on mobile phone
+      @include mobile {
+        // display: none;
+        max-width: 480px;
+      }
 
       img {
         width: 100%;
@@ -27,7 +34,11 @@
         object-fit: cover;
         border-radius: 50%;
         position: absolute;
-        bottom:190px
+        bottom: 190px;
+        //Allows us to hide the bar on mobile phone
+        @include mobile {
+          top:190px;
+        }
       }
       .user-info {
         padding: 50px;
@@ -40,9 +51,14 @@
         background-color: themed("bg");
         color: themed("textColor");
 
-        .user-name{
-            font-size: 30px;
-            font-weight: bold;
+        //Allows us to hide the bar on mobile phone
+        @include mobile {
+          flex-direction: column;
+        }
+
+        .user-name {
+          font-size: 30px;
+          font-weight: bold;
         }
 
         .info {
@@ -53,10 +69,25 @@
           justify-content: space-between;
           border-radius: 10px;
 
-          .left {
+          //Allows us to hide the bar on mobile phone
+          @include mobile {
+            flex-direction: column;
+            gap: 10px;
           }
 
-          .center,.left {
+          .center {
+            display: flex;
+            gap: 30px;
+
+            .item {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              cursor: pointer;
+            }
+          }
+          .left {
             display: flex;
             gap: 30px;
 
@@ -75,14 +106,14 @@
           }
         }
 
-        button{
-            border-radius: 5px;
-            border: none;
-            padding: 10px;
-            background-color: rgb(40, 130, 233);
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
+        button {
+          border-radius: 5px;
+          border: none;
+          padding: 10px;
+          background-color: rgb(40, 130, 233);
+          color: white;
+          font-weight: 600;
+          cursor: pointer;
         }
       }
     }

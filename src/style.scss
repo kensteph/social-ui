@@ -1,5 +1,5 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 $themes: (
   light: (
@@ -21,25 +21,40 @@ $themes: (
 );
 
 @mixin themify($themes) {
-    @each $theme,$map in $themes {
-        .theme-#{$theme} & {
-            $theme-map: () !global;
-            @each $key, $submap in $map {
-                $value: map-get(map-get($themes, $theme), "#{$key}");
-                $theme-map: map-merge(
-                    $theme-map,(
-                        $key: $value,
-                    )
-                ) !global;
-            }
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
 
-            @content;
-            $theme-map: null !global;
-        }
+      @content;
+      $theme-map: null !global;
     }
+  }
 }
 
 /*Acts like a getter*/
-@function themed($key){
-    @return map-get($theme-map, $key);
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+/* MANAGE RESPONSIVENESS*/
+
+@mixin mobile {
+  @media (max-width: 480px) { /*From 0px to 480px*/
+    @content;
+  }
+}
+
+@mixin tablet {
+    @media (max-width:960px) {
+        @content;
+    }
 }

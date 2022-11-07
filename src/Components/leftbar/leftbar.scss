@@ -1,5 +1,15 @@
 @import "../../style.scss";
 .leftbar {
+  //Allows us modify the css element on phone
+  @include mobile {
+    display: none;
+  }
+
+ //Allows us modify the css element on tablet
+  @include tablet {
+    // display: none;
+  }
+
   @include themify($themes) {
     flex: 2;
     position: sticky;
@@ -12,7 +22,7 @@
       display: none;
     }
     background-color: themed("bg");
-    color:themed("textColor");
+    color: themed("textColor");
 
     .container {
       padding: 20px;
@@ -24,6 +34,7 @@
       .title {
         font-size: 15px;
       }
+
       .item-user {
         display: flex;
         align-items: center;
@@ -34,6 +45,18 @@
           height: 30px;
           border-radius: 50%;
           object-fit: cover;
+          //Allows us modify the css element on tablet
+          @include tablet {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        span{
+          //Allows us modify the css element on tablet
+        @include tablet {
+          display: none;
+        }
         }
       }
       .item {
