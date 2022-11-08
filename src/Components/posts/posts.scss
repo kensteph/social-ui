@@ -6,6 +6,6 @@
   gap: 30px;
   //Allows us modify the element style on mobile phone
   @include mobile{
-    padding: 10px;
+    padding: 0px;
   }
 }
