@@ -1,6 +1,16 @@
 @import "../../style.scss";
 
 .rightbar {
+   //Allows us to hide the bar on mobile phone
+   @include mobile{
+    display: none;
+  }
+
+  //Allows us to hide the bar on tablet
+  @include tablet{
+    display: none;
+  }
+  
   @include themify($themes) {
     flex: 3;
     position: sticky;

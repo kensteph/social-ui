@@ -7,10 +7,10 @@
     border-bottom: 1px solid themed("logo");
     padding: 10px 20px;
     height: 50px;
-    position: sticky; 
+    position: sticky;
     top: 0;
     background-color: themed("bg");
-    color:themed("textColorSoft");
+    color: themed("textColorSoft");
     z-index: 999;
 
     .left {
@@ -19,7 +19,7 @@
 
       .logo {
         font-size: 24px;
-        color:themed("logo");
+        color: themed("logo");
         font-weight: 600;
       }
       .search {
@@ -28,11 +28,27 @@
         align-items: center;
         border: 1px solid themed("border");
 
+        //Allows us to hide the input on mobile phone
+        @include mobile {
+          width: 25px;
+          height: 25px;
+        }
+
         input {
           width: 500px;
           border: none;
           background-color: transparent;
           color: themed("textColorSoft");
+
+          //Allows us to hide the input on mobile phone
+          @include mobile {
+            display: none;
+          }
+
+          //Allows us to hide the bar on tablet
+          @include tablet {
+            width: 80%;
+          }
         }
       }
     }
@@ -41,10 +57,20 @@
       display: flex;
       gap: 30px;
 
+      //Allows us to hide the content  on mobile phone
+      @include mobile {
+        display: none;
+      }
+
       .user {
         display: flex;
         gap: 10px;
         align-items: center;
+
+        //Allows us to hide the bar on tablet
+        @include tablet {
+          display: none;
+        }
 
         img {
           width: 30px;

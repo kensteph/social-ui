@@ -10,8 +10,14 @@ import {
   Twitter,
 } from "@mui/icons-material";
 import Posts from "../../Components/posts/Posts"
+import {profiles} from "../../data/dummy";
+import { useLocation } from "react-router-dom";
 
 const Profile = () => {
+  const location = useLocation();
+  const userID = parseInt(location.pathname.split("/")[2]);
+  const userProfile = profiles[userID-1];
+  console.log({userProfile})
   return (
     <div className="profile">
       <div className="profile-header">
@@ -21,11 +27,11 @@ const Profile = () => {
         />
         <img
           className="avatar"
-          src="https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src={userProfile.img}
           alt=""
         />
         <div className="user-info">
-          <span className="user-name">Stephanie Saint-Louis</span>
+          <span className="user-name">{userProfile.name}</span>
           <div className="info">
             <div className="left">
               <div className="item">

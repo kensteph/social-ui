@@ -30,6 +30,11 @@ export const stories=[
             name:"Mardochee Saul",
             img:"https://images.pexels.com/photos/2535859/pexels-photo-2535859.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
+        {
+            id:7,
+            name:"Theodora Woel Romain",
+            img:"https://images.pexels.com/photos/14100684/pexels-photo-14100684.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+        },
     ];
 
 //Dummy POSTS
@@ -150,5 +155,39 @@ export const posts=[
                 comment:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             },
         ]
+    },
+];
+
+//Dummy PROFILE
+export const profiles=[
+    {
+        id:1,
+        name:"Kender Romain",
+        img:"https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        id:2,
+        name:"Natacha Jules",
+        img:"https://images.pexels.com/photos/1062280/pexels-photo-1062280.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        id:3,
+        name:"Schney Rameau",
+        img:"https://images.pexels.com/photos/1771383/pexels-photo-1771383.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        id:4,
+        name:"Nardine Louis",
+        img:"https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        id:5,
+        name:"Marie Lyn Sanon",
+        img:"https://images.pexels.com/photos/4315839/pexels-photo-4315839.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        id:6,
+        name:"Mardochee Saul",
+        img:"https://images.pexels.com/photos/2535859/pexels-photo-2535859.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
 ];
